@@ -1,0 +1,24 @@
+h1 {
+    color: darkblue;
+    font-family: Comic Sans Ms;
+    text-align: center;
+    font-size: 60px;
+}
+body {
+    background-color: aqua;
+}
+h4 {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+}
+.putih {
+    color: white;
+}
+.p1 {
+    color: orange;
+    text-align: center;
+}
+.p2 {
+    text-align: right;
+}
