@@ -1,0 +1,120 @@
+.clear {
+    clear: both;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 1000px;
+    background-color: bisque;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+}
+
+.header h1 {
+    text-align: start;
+    margin-right: 400px;
+    margin-left: 50px;
+}
+
+.nav ul li {
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.container {
+    margin: 80px auto;
+    background-color: rgb(193, 187, 187);
+    width: 1000px;
+}
+
+.container img {
+    width: 500px;
+    height: 500px;
+}
+
+.aboutme {
+    float: right;
+    width: 450px;
+    margin-right: 50px;
+    margin-left: -40px;
+    margin-top: 30px;
+}
+
+.aboutme h1 {
+    font-size: 80px;
+}
+
+.aboutme h2 {
+    margin-top: -50px;
+}
+
+.aboutme p {
+    text-align: justify;
+}
+
+.gallery {
+    height: 504px;
+}
+
+.gallery h1 {
+    text-align: center;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery ul li {
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.hobby {
+    height: 504px;
+}
+
+.hobbies {
+    width: 450px;
+    margin-left: 35px;
+    margin-top: 150px;
+}
+
+.hobby img {
+    width: 450px;
+    height: 450px;
+    float: right;
+    margin-top: -300px;
+}
+
+.listhobby img {
+    width: 250px;
+    height: 250px;
+    float: none;
+    margin-bottom: -300px;
+    display: inline;
+}
+
+.listhobby ul li {
+    list-style: none;
+}
