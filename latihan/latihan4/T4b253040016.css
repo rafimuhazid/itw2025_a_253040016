@@ -21,17 +21,14 @@ body {
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   overflow: hidden;
-  transition: all 0.5s ease;
 }
 
 .header {
   background: linear-gradient(135deg, #000, #222);
   padding: 25px 40px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid #333;
+  height: auto;
+  text-align: center;
 }
 
 .header .judul {
@@ -41,12 +38,12 @@ body {
   color: #fff;
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  transition: transform 0.4s ease;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .header .judul:hover {
   transform: scale(1.05);
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .header ul {
@@ -64,103 +61,52 @@ body {
   text-transform: capitalize;
   color: #ccc;
   font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
   letter-spacing: 0.5px;
-}
-
-.header ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #fff;
-  transition: 0.3s ease;
 }
 
 .header ul li a:hover {
   color: #fff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
-.header ul li a:hover::after {
+.content .hero,
+.content .cyberpunk,
+.content .jenis,
+.content .simpulan {
   width: 100%;
+  max-width: 100%;
+  height: 250px;
+  margin: 20px 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.content .hero:hover,
+.content .cyberpunk:hover,
+.content .jenis:hover,
+.content .simpulan:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%) brightness(1);
 }
 
 .content .hero {
-  width: 100%;                
-  max-width: 100%;            
-  height: 250px;            
-  margin: 20px 0;            
-  background-image: url('img/cyberpunk\ \(2\).png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: all 0.6s ease;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.content .hero:hover {
-  transform: scale(1.02);
+  background-image: url('img/cyberpunk (2).png');
 }
 
 .content .cyberpunk {
-  width: 100%;                
-  max-width: 100%;            
-  height: 250px;            
-  margin: 20px 0;            
-  background-image: url('img/cyberpunk\ \(1\).png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
+  background-image: url('img/cyberpunk (1).png');
   filter: grayscale(100%) brightness(0.8);
-  transition: all 0.6s ease;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.content .cyberpunk:hover {
-  filter: grayscale(0%) brightness(1);
-  transform: scale(1.02);
 }
 
 .content .jenis {
-  width: 100%;                
-  max-width: 100%;            
-  height: 250px;            
-  margin: 20px 0;            
   background-image: url('img/jenis.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
   filter: grayscale(100%) brightness(0.8);
-  transition: all 0.6s ease;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.content .jenis:hover {
-  filter: grayscale(0%) brightness(1);
-  transform: scale(1.02);
 }
 
 .content .simpulan {
-  width: 100%;                
-  max-width: 100%;            
-  height: 250px;            
-  margin: 20px 0;            
   background-image: url('img/chart.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
   filter: grayscale(100%) brightness(0.8);
-  transition: all 0.6s ease;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.content .simpulan:hover {
-  filter: grayscale(0%) brightness(1);
-  transform: scale(1.02);
 }
 
 .content {
@@ -172,32 +118,21 @@ body {
   font-size: 28px;
   color: #fff;
   margin-bottom: 15px;
-  position: relative;
   letter-spacing: 0.5px;
 }
 
-.content h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
+.content h2 + .underline {
   width: 60px;
   height: 3px;
   background: #fff;
   border-radius: 2px;
-  animation: slide 2s infinite;
+  margin-bottom: 20px;
 }
 
 .we {
-  border: 1px solid #fff;    
-  display: inline-block;     
-  padding: 10px 20px;                   
-}
-
-@keyframes slide {
-  0% { width: 0; }
-  50% { width: 60px; }
-  100% { width: 0; }
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 10px 20px;
 }
 
 .content .penulis {
@@ -209,25 +144,6 @@ body {
 .content .penulis a {
   color: #fff;
   text-decoration: none;
-  position: relative;
-}
-
-.content .penulis a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  background: #fff;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: right;
-}
-
-.content .penulis a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
 }
 
 .content p {
@@ -250,47 +166,4 @@ body {
 .footer .copy:hover {
   color: #fff;
   letter-spacing: 1px;
-  transition: 0.4s ease;
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header ul {
-    margin-top: 10px;
-  }
-
-  .header ul li {
-    display: block;
-    margin: 8px 0;
-  }
-
-  .content {
-    padding: 25px;
-  }
-
-  .content h2 {
-    font-size: 22px;
-  }
-
-  .hero {
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header .judul {
-    font-size: 28px;
-  }
-
-  .content {
-    padding: 20px;
-  }
-
-  .footer {
-    font-size: 12px;
-  }
 }
